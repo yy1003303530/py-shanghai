@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -19,4 +19,7 @@ class PageViewList(APIView):
             s.save()
             return  Response(s.data,status=status.HTTP_201_CREATED)
         return Response(s.errors,status=status.HTTP_400_BAD_REQUEST)
+def index(request):
+    return HttpResponse('INDEX')
+
 
