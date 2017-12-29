@@ -20,6 +20,7 @@ class PageViewList(APIView):
             return  Response(s.data,status=status.HTTP_201_CREATED)
         return Response(s.errors,status=status.HTTP_400_BAD_REQUEST)
 def index(request):
-    return HttpResponse('INDEX')
+    return  render(request,'index.html')
+    #return HttpResponse('INDEX')
 
 
