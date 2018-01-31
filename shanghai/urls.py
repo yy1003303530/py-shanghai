@@ -22,6 +22,6 @@ from home import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^page/$', PageViewList.as_view()),
-    #url(r'', views.index),
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'', views.index),
+    # url(r'^$', TemplateView.as_view(template_name="index.html")),
 ]
